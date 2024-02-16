@@ -1,20 +1,21 @@
 <div class="container-fluid" style="height: 200px;"">
 
 
-    <section class=" row p-2 mt-5 me-3">
-    <div class="col-12 d-flex justify-content-end">
+    <section class=" row p-2 mt-5 me-3 justify-content-end">
+    <div class="col-4 d-flex flex-column justify-content-end">
 
-        <form onsubmit="app.TodoController.createNewTodo()">
-            <div class="input-group mb-3">
+        <form class="w-100" onsubmit="app.TodoController.createNewTodo()">
+            <div class="input-group mb-1">
                 <input type="text" class="form-control" placeholder="Create a New Todo" aria-label="To Do input"
                     aria-describedby="basic-addon2">
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="submit">+</button>
                 </div>
             </div>
-        </form>
+        </form><br>
 
-        <div id="listOfTodos">
+        <div class="" id="listOfTodos">
+            <!-- <p><input id="completed" name="completed" value="completed" type="checkbox">A todo goes here</p> -->
 
         </div>
 
