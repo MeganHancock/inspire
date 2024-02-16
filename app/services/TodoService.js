@@ -10,6 +10,8 @@ class TodoService {
         AppState.listOfTodos.push(newTodo)
         console.log('new todo list', AppState.listOfTodos)
 
+        const response = await api.post('api/todos', newTodo)
+        console.log('posting to do', response.data);
     }
 
 
