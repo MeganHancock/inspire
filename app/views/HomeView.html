@@ -6,8 +6,8 @@
 
         <form class="w-100" onsubmit="app.TodoController.createNewTodo()">
             <div class="input-group mb-1">
-                <input type="text" class="form-control" placeholder="Create a New Todo" aria-label="To Do input"
-                    aria-describedby="basic-addon2">
+                <input name="description" for="description" type="text" maxlength="120" class="form-control"
+                    placeholder="Create a New Todo" aria-label="To Do input" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="submit">+</button>
                 </div>
