@@ -2,12 +2,26 @@ import { todoService } from "../services/TodoService.js";
 import { Pop } from "../utils/Pop.js";
 import { getFormData } from "../utils/FormHandler.js";
 import { setHTML, setText } from "../utils/Writer.js";
+import { AppState } from "../AppState.js";
+
+
+function _drawTodoList() {
+    const todos = AppState.listOfTodos
+    let htmlString = ''
+    todos.forEach(todo => htmlString += todo.TodoListHTMLTemplate)
+    setHTML('listOfTodos', htmlString)
+}
 
 
 export class TodoController {
     constructor() {
         console.log('controller hooked up');
+
+        AppState.on('listOfTodos', _drawTodoList)
+        AppState.on('account', this.getTodosForLoggedInUser)
     }
+
+
 
     async createNewTodo() {
         try {
@@ -17,6 +31,18 @@ export class TodoController {
             // console.log('form', form)
             const todoFormData = getFormData(form)
             await todoService.createNewTodo(todoFormData)
+            // @ts-ignore
+            form.reset()
+
+        } catch (error) {
+            console.error(error);
+            Pop.error(error)
+        }
+    }
+
+    async getTodosForLoggedInUser() {
+        try {
+            await todoService.getTodosForLoggedInUser()
         } catch (error) {
             console.error(error);
             Pop.error(error)
