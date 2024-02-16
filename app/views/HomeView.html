@@ -1,0 +1,48 @@
+<div class="container-fluid" style="height: 200px;"">
+
+
+    <section class=" row p-2 mt-5 me-3">
+    <div class="col-12 d-flex justify-content-end">
+
+        <form onsubmit="app.TodoController.createNewTodo()">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Create a New Todo" aria-label="To Do input"
+                    aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit">+</button>
+                </div>
+            </div>
+        </form>
+
+        <div id="listOfTodos">
+
+        </div>
+
+    </div>
+    </section>
+
+
+
+
+
+    <div class="fixed-bottom">
+        <section class="row m-3">
+            <div class="col-12 text-center mb-5">
+                <p>Here goes a quote</p>
+            </div>
+        </section>
+
+        <section class="row justify-content-between m-3 mb-5 text-center">
+            <div class="col-4">
+                <p>Date</p>
+            </div>
+            <div class="col-4">
+                <p>Time</p>
+            </div>
+            <div class="col-4">
+                <p>Name and Picture
+                <p>
+            </div>
+        </section>
+    </div>
+</div>
