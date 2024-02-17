@@ -5,6 +5,17 @@ import { api } from "./AxiosService.js"
 class TodoService {
 
 
+    async removeTodo(todoId) {
+        const response = await api.delete(`api/todos/${todoId}`)
+        console.log('deleting todo', response.data);
+        const todoIndex = AppState.listOfTodos.findIndex(todo => todo.id == todoId)
+        if (todoIndex == -1) {
+            throw new Error('Index was -1, you screwed something up')
+        }
+        AppState.listOfTodos.splice(todoIndex, 1)
+    }
+
+
     async getTodosForLoggedInUser() {
         const response = await api.get('api/todos')
         console.log('getting my todos', response.data);

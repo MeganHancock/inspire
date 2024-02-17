@@ -48,7 +48,33 @@ export class TodoController {
             Pop.error(error)
         }
     }
+
+    async removeTodo(todoId) {
+        try {
+            const wantsToRemove = await Pop.confirm('Are you sure you would like do delete this Todo?')
+            if (!wantsToRemove) {
+                return
+            }
+            await todoService.removeTodo(todoId)
+            Pop.success('Todo has been deleted 🥳')
+        } catch (error) {
+            console.error(error);
+            Pop.error(error)
+        }
+    }
+
+
+    async updateTodoAsCompleted(todoId) {
+        try {
+            console.log('marking to do as complete')
+        } catch (error) {
+            console.error(error);
+            Pop.error(error)
+        }
+    }
 }
+
+
 // createNewJot() {
 //     try {
 //         event.preventDefault()
