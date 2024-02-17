@@ -67,6 +67,7 @@ export class TodoController {
     async updateTodoAsCompleted(todoId) {
         try {
             console.log('marking to do as complete')
+            await todoService.updateTodoAsComplete(todoId)
         } catch (error) {
             console.error(error);
             Pop.error(error)

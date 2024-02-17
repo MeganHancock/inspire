@@ -5,6 +5,26 @@ import { api } from "./AxiosService.js"
 class TodoService {
 
 
+    async updateTodoAsComplete(todoId) {
+        const indexOfTodoToUpdate = AppState.listOfTodos.findIndex(todo => todo.id == todoId)
+
+        if (indexOfTodoToUpdate == -1) {
+            throw new Error('find index is -1')
+        }
+
+        const foundTodo = AppState.listOfTodos[indexOfTodoToUpdate]
+        const todoUpdateData = { completed: !foundTodo.completed }
+        console.log('todo update data', todoUpdateData)
+
+        const response = await api.put(`api/todos/${todoId}`, todoUpdateData)
+        console.log('updated todo', response.data);
+        console.log('old object', foundTodo);
+
+        const updatedTodo = new Todo(response.data)
+        AppState.listOfTodos.splice(indexOfTodoToUpdate, 1, updatedTodo)
+    }
+
+
     async removeTodo(todoId) {
         const response = await api.delete(`api/todos/${todoId}`)
         console.log('deleting todo', response.data);
