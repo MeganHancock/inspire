@@ -19,7 +19,15 @@ body {
     -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: black;
     color: white;
-    font-weight: bold;
+    font-size: medium;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.text-bg {
+    background-color: rgba(0, 0, 0, 0.276);
 }
 
 /* .quote-author {
@@ -33,9 +41,10 @@ body {
 #quote {
     color: white;
     text-shadow: 1px 1px 3px black;
+    font-size: larger !important;
     font-weight: bold;
     padding: .6em 1em;
-    background-color: rgba(25, 25, 25, 0.203);
+    background-color: none !important;
     border-radius: 16px;
 }
 
