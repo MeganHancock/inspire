@@ -69,8 +69,26 @@ body {
 .overflow-y {
     overflow-y: scroll;
 
+
 }
 
 #listOfTodos {
     font-size: 18px !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5%;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

@@ -17,7 +17,7 @@ export class QuoteController {
 
     async getQuote() {
         try {
-            console.log('getting quote')
+            // console.log('getting quote')
             await quoteService.getQuote()
 
         } catch (error) {

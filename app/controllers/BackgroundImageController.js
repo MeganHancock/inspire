@@ -4,8 +4,9 @@ import { Pop } from "../utils/Pop.js";
 
 function _drawBackgroundImage() {
     const bgImage = AppState.backgroundImage
-    console.log('bg img', bgImage.imgUrl)
-    document.body.style.backgroundImage = `url(${bgImage.imgUrl})`
+    // console.log('bg img', bgImage.imgUrl)
+    // console.log('large img', bgImage.largeImgUrl)
+    document.body.style.backgroundImage = `url(${bgImage.largeImgUrl}), url(${bgImage.imgUrl})`
 
 }
 

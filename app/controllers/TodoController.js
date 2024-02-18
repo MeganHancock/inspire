@@ -23,7 +23,7 @@ function _drawTodoList() {
 
 export class TodoController {
     constructor() {
-        console.log('controller hooked up');
+        // console.log('controller hooked up');
 
         AppState.on('listOfTodos', _drawTodoList)
         AppState.on('account', this.getTodosForLoggedInUser)
@@ -75,7 +75,7 @@ export class TodoController {
 
     async updateTodoAsCompleted(todoId) {
         try {
-            console.log('marking to do as complete')
+            // console.log('marking to do as complete')
             await todoService.updateTodoAsComplete(todoId)
         } catch (error) {
             console.error(error);

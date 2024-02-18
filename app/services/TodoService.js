@@ -14,10 +14,10 @@ class TodoService {
 
         const foundTodo = AppState.listOfTodos[indexOfTodoToUpdate]
         const todoUpdateData = { completed: !foundTodo.completed }
-        console.log('todo update data', todoUpdateData)
+        // console.log('todo update data', todoUpdateData)
 
         const response = await api.put(`api/todos/${todoId}`, todoUpdateData)
-        console.log('updated todo', response.data);
+        // console.log('updated todo', response.data);
         // console.log('old object', foundTodo);
 
         const updatedTodo = new Todo(response.data)

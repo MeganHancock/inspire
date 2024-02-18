@@ -10,7 +10,7 @@ class BackgroundImageService {
         const newImage = new BackgroundImage(response.data)
         // console.log('image', newImage);
         AppState.backgroundImage = newImage
-        console.log('new appstate bg image', newImage)
+        // console.log('new appstate bg image', newImage)
     }
 
 
