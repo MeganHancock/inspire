@@ -22,10 +22,28 @@ body {
     font-weight: bold;
 }
 
-.quote-author {
+/* .quote-author {
     display: none;
 }
 
-#quote:hover {
-    display: block
+.quote:hover {
+    display: unset !important;
+} */
+
+#quote {
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    font-weight: bold;
+    padding: .6em 1em;
+    background-color: rgba(25, 25, 25, 0.203);
+    border-radius: 16px;
+}
+
+.quote-author {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+#quote:hover .quote-author {
+    opacity: 1;
 }
