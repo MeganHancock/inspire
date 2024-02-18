@@ -3,14 +3,36 @@ import { Weather } from "../models/Weather.js";
 import { api } from "./AxiosService.js";
 
 class WeatherService {
-    tempSwap(weatherId) {
-        if (AppState.weather.fahrenheit = true) {
-            AppState.weather.fahrenheit = false
-        }
-        else if (AppState.weather.fahrenheit = false) {
-            AppState.weather.fahrenheit = true
-        }
+    tempToCelsius(isFahrenheit) {
+        console.log(isFahrenheit)
+        isFahrenheit = false
+        console.log(isFahrenheit)
+        AppState.weather.fahrenheit = isFahrenheit
         console.log(AppState.weather.fahrenheit);
+
+        // if (isFahrenheit == true) {
+        //     console.log('temp swap service', AppState.weather.fahrenheit);
+        //     const tempUpdateData = { fahrenheit: !AppState.weather.fahrenheit }
+        //     AppState.weather.fahrenheit = tempUpdateData
+        //     console.log('temp to celsius', tempUpdateData);
+        // } else {
+        //     const tempUpdateData = { fahrenheit: AppState.weather.fahrenheit }
+        //     AppState.weather.fahrenheit = tempUpdateData
+        //     console.log('tempUpdateData F FALSE', tempUpdateData);
+        // }
+        AppState.emit('weather')
+
+    }
+
+    tempToFahrenheit(isFahrenheit) {
+        console.log(isFahrenheit)
+        isFahrenheit = true
+        console.log(isFahrenheit)
+        AppState.weather.fahrenheit = isFahrenheit
+        console.log(AppState.weather.fahrenheit);
+
+        AppState.emit('weather')
+
     }
 
     async getCurrentWeather() {

@@ -5,21 +5,21 @@ export class Weather {
         this.id = data.id
         this.name = data.name
         this.icon = data.icon
-        this.fahrenheit = true
+        this.fahrenheit = data.fahrenheit || true
     }
 
     get FahrenheitWeatherHTMLTemplate() {
         return `
-        <div class="weather-hover text-bg rounded-3 p-2 h-100 fs-1 w-50" onclick="app.WeatherController.tempSwap('${this.id}')"> 
-        <p>${this.FahrenheitTemp}</p>
+        <div class="weather-hover text-bg rounded-3 p-2 h-100 fs-1 w-50" onclick="app.WeatherController.tempToCelsius('${this.fahrenheit}')"> 
+        <p>${this.FahrenheitTemp} <span class="mdi mdi-temperature-fahrenheit"></span></p>
         <i class="mdi mdi-weather-partly-cloudy"></i> 
         </div>
         `
     }
     get CelsiusWeatherHTMLTemplate() {
         return `
-        <div class="weather-hover text-bg rounded-3 p-2 h-100 fs-1 w-50" onclick="app.WeatherController.tempSwap('${this.id}')"> 
-        <p>${this.CelsiusTemp}</p>
+        <div class="weather-hover text-bg rounded-3 p-2 h-100 fs-1 w-50" onclick="app.WeatherController.tempToFahrenheit('${this.fahrenheit}')"> 
+        <p>${this.CelsiusTemp} <span class="mdi mdi-temperature-celsius"></span></p>
         <i class="mdi mdi-weather-partly-cloudy"></i> 
         </div>
         `
