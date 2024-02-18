@@ -33,7 +33,7 @@ export class WeatherController {
 
     tempToCelsius(isFahrenheit) {
         try {
-            console.log('tempToCelsius')
+            console.log('tempToCelsius', AppState.weather.icon)
             weatherService.tempToCelsius(isFahrenheit)
         } catch (error) {
             console.error(error)

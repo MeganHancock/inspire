@@ -1,8 +1,8 @@
 <div class="container-fluid" style="height: 200px;"">
 
 
-    <section class=" row p-2 mt-5 me-3 justify-content-end">
-    <div class="col-4 d-flex flex-column justify-content-end text-bg rounded-3 p-2">
+    <section class=" row p-2 mt-3 me-3 justify-content-end">
+    <div class="col-4 d-flex flex-column  text-bg rounded-3 p-2 overflow">
 
         <form class="w-100" onsubmit="app.TodoController.createNewTodo()">
             <h4>You have <span id="todoCount"></span> todos remaining</h4>
@@ -15,7 +15,7 @@
             </div>
         </form><br>
 
-        <div class="" id="listOfTodos">
+        <div class="mb-1 overflow-y" id="listOfTodos">
             <!-- <p><input id="completed" name="completed" value="completed" type="checkbox">A todo goes here</p> -->
 
         </div>
@@ -29,13 +29,13 @@
 
 
     <div class="fixed-bottom ">
-        <section class="row  mt-5">
-            <div class="col-12 text-center mb-1 fs-2 rounded-3 p-2">
-                <a id="quote" class=""></a>
+        <section class="row mx-3 mt-5 mb-0 pb-0">
+            <div class="col-12 text-center mb-0 pb-0 fs-2 rounded-3 p-2 ">
+                <p id="quote" class=""></p>
             </div>
         </section>
 
-        <section class="row justify-content-between m-3 mb-5 text-center">
+        <section class="row justify-content-between mt-0 mb-5 text-center">
             <div id="weather" class="col-3 w-25">
                 <!-- <p>Descript</p>
                 <p>Temp</p> -->

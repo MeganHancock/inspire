@@ -4,7 +4,7 @@ export class Weather {
         this.main = data.main
         this.id = data.id
         this.name = data.name
-        this.icon = data.icon
+        this.icon = data.icon || data.weather.icon
         this.fahrenheit = data.fahrenheit || true
     }
 

@@ -11,7 +11,7 @@ export class Todo {
     get TodoListHTMLTemplate() {
         return `
         <div class="d-flex justify-content-between todo rounded-2 pe-2 pb-1">
-        <div class="mx-2 fs-3">
+        <div class="mx-2">
         ${this.CompletedCheckbox} 
         ${this.description}
         </div>

@@ -8,11 +8,16 @@ export class Quote {
 
     get QuoteHTMLTemplate() {
         return `
-        <p class="quote-content">${this.content}<br>
+        <p class="quote-content mx-2 pb-0 mb-0">${this.content}<br>
         <span class="quote-author">${this.author}</span></p>
         `
     }
+
+
+
+
 }
+
 
 // const quoteData =
 // {

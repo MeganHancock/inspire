@@ -41,11 +41,12 @@ body {
 #quote {
     color: white;
     text-shadow: 1px 1px 3px black;
-    font-size: larger !important;
+    font-size: 1em !important;
     font-weight: bold;
-    padding: .6em 1em;
+    padding: .6em .01em;
     background-color: none !important;
     border-radius: 16px;
+
 }
 
 
@@ -59,6 +60,17 @@ body {
     opacity: 1;
 }
 
-a {
-    text-decoration: none !important;
+.overflow {
+    overflow: hidden;
+    height: 20rem;
+
+}
+
+.overflow-y {
+    overflow-y: scroll;
+
+}
+
+#listOfTodos {
+    font-size: 18px !important;
 }
