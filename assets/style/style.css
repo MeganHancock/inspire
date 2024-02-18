@@ -27,7 +27,7 @@ body {
 }
 
 .text-bg {
-    background-color: rgba(0, 0, 0, 0.276);
+    background-color: rgba(0, 0, 0, 0.374);
 }
 
 /* .quote-author {
@@ -48,6 +48,8 @@ body {
     border-radius: 16px;
 }
 
+
+
 .quote-author {
     opacity: 0;
     transition: all 1s ease-in-out;
@@ -55,4 +57,8 @@ body {
 
 #quote:hover .quote-author {
     opacity: 1;
+}
+
+a {
+    text-decoration: none !important;
 }

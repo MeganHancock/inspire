@@ -10,7 +10,7 @@ export class Weather {
 
     get FahrenheitWeatherHTMLTemplate() {
         return `
-        <div class="weather-hover" onclick="app.WeatherController.tempSwap('${this.id}')"> 
+        <div class="weather-hover text-bg rounded-3 p-2 h-100 fs-1 w-50" onclick="app.WeatherController.tempSwap('${this.id}')"> 
         <p>${this.FahrenheitTemp}</p>
         <i class="mdi mdi-weather-partly-cloudy"></i> 
         </div>
@@ -18,7 +18,7 @@ export class Weather {
     }
     get CelsiusWeatherHTMLTemplate() {
         return `
-        <div class="weather-hover" onclick="app.WeatherController.tempSwap('${this.id}')"> 
+        <div class="weather-hover text-bg rounded-3 p-2 h-100 fs-1 w-50" onclick="app.WeatherController.tempSwap('${this.id}')"> 
         <p>${this.CelsiusTemp}</p>
         <i class="mdi mdi-weather-partly-cloudy"></i> 
         </div>
