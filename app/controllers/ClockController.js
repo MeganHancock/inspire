@@ -9,7 +9,7 @@ export class ClockController {
 
     newDate() {
         const newClock = new Date()
-        console.log(newClock.toLocaleTimeString())
+        // console.log(newClock.toLocaleTimeString())
         setText('clock', newClock.toLocaleTimeString())
     }
 
