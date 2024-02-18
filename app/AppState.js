@@ -1,4 +1,5 @@
 import { Todo } from './models/Todo.js'
+import { Weather } from './models/Weather.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
 
@@ -17,6 +18,12 @@ class ObservableAppState extends EventEmitter {
     * @type {Todo[]}
     */
   listOfTodos = []
+
+
+  /**
+  * @type {Weather[]}
+  */
+  weather = []
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())

@@ -10,7 +10,15 @@ function _drawTodoList() {
     let htmlString = ''
     todos.forEach(todo => htmlString += todo.TodoListHTMLTemplate)
     setHTML('listOfTodos', htmlString)
+
+    const incompleteTodos = AppState.listOfTodos.filter(todo => !todo.completed)
+
+    setText('todoCount', `${incompleteTodos.length}`)
 }
+
+// function _drawTodoCount() {
+//     setText('todoCount', AppState.listOfTodos.length)
+// }
 
 
 export class TodoController {
@@ -19,6 +27,7 @@ export class TodoController {
 
         AppState.on('listOfTodos', _drawTodoList)
         AppState.on('account', this.getTodosForLoggedInUser)
+        // AppState.on('listOfTodos', _drawTodoCount)
     }
 
 

@@ -3,3 +3,8 @@
     background-color: rgba(0, 0, 0, 0.123);
 
 }
+
+.text-outline {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
