@@ -12,3 +12,12 @@
 .weather-hover:hover {
     cursor: pointer;
 }
+
+body {
+    background-size: cover;
+    background-position: center;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
+    color: white;
+    font-weight: bold;
+}
