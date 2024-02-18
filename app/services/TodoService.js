@@ -30,7 +30,7 @@ class TodoService {
         // console.log('deleting todo', response.data);
         const todoIndex = AppState.listOfTodos.findIndex(todo => todo.id == todoId)
         if (todoIndex == -1) {
-            throw new Error('Index was -1, you screwed something up')
+            throw new Error('Index was -1')
         }
         AppState.listOfTodos.splice(todoIndex, 1)
     }
