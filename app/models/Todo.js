@@ -1,4 +1,4 @@
-import { generateId } from "../utils/GenerateId.js"
+
 
 export class Todo {
     constructor(data) {
@@ -10,12 +10,14 @@ export class Todo {
 
     get TodoListHTMLTemplate() {
         return `
-        <div class="d-flex justify-content-between todo rounded-2 pe-2 pb-1">
-        <div class="mx-2">
+        <div class="d-flex justify-content-between align-items-center todo rounded-2 pe-2 pb-1">
+        <div class="mx-2 fw-bold">
         ${this.CompletedCheckbox} 
         ${this.description}
         </div>
-        <button class="btn btn-danger h-25 p-0 mt-2" type="button" onclick="app.TodoController.removeTodo('${this.id}')">X</button>
+        <div>
+        <button class="btn btn-danger h-25  p-0 mt-2" type="button" onclick="app.TodoController.removeTodo('${this.id}')"> <span class=" fs-4 mdi mdi-trash-can-outline"></span> </button>
+        </div>
         </div>
         `
     }

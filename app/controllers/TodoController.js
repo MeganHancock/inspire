@@ -13,7 +13,8 @@ function _drawTodoList() {
 
     const incompleteTodos = AppState.listOfTodos.filter(todo => !todo.completed)
 
-    setText('todoCount', `${incompleteTodos.length}`)
+    setText('todoRemainingCount', `${incompleteTodos.length}`)
+    setText('todoCount', AppState.listOfTodos.length)
 }
 
 // function _drawTodoCount() {
@@ -65,7 +66,7 @@ export class TodoController {
                 return
             }
             await todoService.removeTodo(todoId)
-            Pop.success('Todo has been deleted 🥳')
+            Pop.success('Your todo list just got shorter!')
         } catch (error) {
             console.error(error);
             Pop.error(error)

@@ -1,6 +1,6 @@
 /* BASIC STYLES HERE */
 .todo:hover {
-    background-color: rgba(0, 0, 0, 0.123);
+    background-color: rgba(0, 0, 0, 0.288);
 
 }
 
@@ -16,13 +16,17 @@
 body {
     background-size: cover;
     background-position: center;
-    -webkit-text-stroke-width: .5px;
+}
+
+main {
+
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     color: white;
-    font-size: medium;
+    /* font-size: medium; */
 
     font-family: "Poppins", sans-serif;
-    font-weight: 700;
+    /* font-weight: 700; */
     font-style: normal;
 }
 
@@ -40,12 +44,14 @@ body {
 
 #quote {
     color: white;
-    text-shadow: 1px 1px 3px black;
+    text-shadow: 4px 4px 10px black;
     font-size: 1em !important;
     font-weight: bold;
     padding: .6em .01em;
     background-color: none !important;
     border-radius: 16px;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
 
 }
 
@@ -67,17 +73,18 @@ body {
 }
 
 .overflow-y {
-    overflow-y: scroll;
+    overflow-y: auto;
 
 
 }
 
 #listOfTodos {
-    font-size: 18px !important;
+    font-size: 24px !important;
 }
 
 ::-webkit-scrollbar {
     width: 10px;
+    position: reverse;
 }
 
 ::-webkit-scrollbar-track {
@@ -87,8 +94,15 @@ body {
 ::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 5%;
+
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+#inputText {
+    font-weight: lighter !important;
+    /* -webkit-text-stroke-width: none !important;
+    -webkit-text-stroke-color: none !important; */
 }

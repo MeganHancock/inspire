@@ -5,17 +5,19 @@
     <div class="col-4 d-flex flex-column  text-bg rounded-3 p-2 overflow">
 
         <form class="w-100" onsubmit="app.TodoController.createNewTodo()">
-            <h4>You have <span id="todoCount"></span> todos remaining</h4>
-            <div class="input-group mb-1">
-                <input name="description" for="description" type="text" maxlength="120" class="form-control"
-                    placeholder="Create a New Todo" aria-label="To Do input" aria-describedby="basic-addon2">
+            <h4 class="fw-bold">You have <span id="todoRemainingCount"></span>/<span id="todoCount"></span> todos
+                remaining</h4>
+            <div class="input-group mb-0 pb-0">
+                <input name="description" for="description" type="text" maxlength="120" id="inputText"
+                    class="mt-1 form-control" placeholder="Create a New Todo" aria-label="To Do input"
+                    aria-describedby="basic-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-secondary" type="submit">+</button>
+                    <button class="mt-1 btn btn-secondary" type="submit">+</button>
                 </div>
             </div>
         </form><br>
 
-        <div class="mb-1 overflow-y" id="listOfTodos">
+        <div class="mb-1 overflow-y d-flex flex-column-reverse" id="listOfTodos">
             <!-- <p><input id="completed" name="completed" value="completed" type="checkbox">A todo goes here</p> -->
 
         </div>
@@ -36,7 +38,7 @@
         </section>
 
         <section class="row justify-content-between mt-0 mb-5 mx-5 text-center">
-            <div id="weather" class="col-3 w-25">
+            <div id="weather" class="col-3 w-25 fw-bold">
                 <!-- <p>Descript</p>
                 <p>Temp</p> -->
             </div>
@@ -44,7 +46,7 @@
                 <p>
                 <p>
             </div> -->
-            <div class="col-3 d-flex align-items-center justify-content-center">
+            <div class="col-3 d-flex align-items-center justify-content-center fw-bold">
                 <p id="clock" class="text-bg rounded-3 p-2 fs-1 w-100"></p>
             </div>
 
