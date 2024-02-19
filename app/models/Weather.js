@@ -6,21 +6,24 @@ export class Weather {
         this.name = data.name
         this.icon = data.icon || data.weather.icon
         this.fahrenheit = data.fahrenheit || true
+        this.icon = data.weather[0].icon
+
     }
 
     get FahrenheitWeatherHTMLTemplate() {
         return `
         <div class="weather-hover text-bg rounded-3 p-2 h-100 fs-1 w-50" onclick="app.WeatherController.tempToCelsius('${this.fahrenheit}')"> 
         <p>${this.FahrenheitTemp} <span class="mdi mdi-temperature-fahrenheit"></span></p>
-        <i class="mdi mdi-weather-partly-cloudy"></i> 
+        <img src="https://openweathermap.org/img/wn/${this.icon}.png" >
         </div>
         `
     }
     get CelsiusWeatherHTMLTemplate() {
         return `
         <div class="weather-hover text-bg rounded-3 p-2 h-100 fs-1 w-50" onclick="app.WeatherController.tempToFahrenheit('${this.fahrenheit}')"> 
-        <p>${this.CelsiusTemp} <span class="mdi mdi-temperature-celsius"></span></p>
-        <i class="mdi mdi-weather-partly-cloudy"></i> 
+        <p>${this.CelsiusTemp} 
+        <span class="mdi mdi-temperature-celsius"></span></p>
+        <img src="https://openweathermap.org/img/wn/${this.icon}.png" >
         </div>
         `
     }
